@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bodyTubular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="lidBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="shadowInverter" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Floor Shadow -->
+  <ellipse cx="250" cy="535" rx="190" ry="16" fill="#000000" opacity="0.3"/>
+
+  <g filter="url(#shadowInverter)">
+    <!-- Tall Tubular Body -->
+    <rect x="90" y="120" width="320" height="400" rx="12" fill="url(#bodyTubular)" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="94" y="500" width="312" height="16" rx="4" fill="#94a3b8"/>
+
+    <!-- Bottom reinforcement ribs -->
+    <path d="M90 440 H410 M90 470 H410" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Side Handles -->
+    <rect x="74" y="190" width="16" height="50" rx="3" fill="#0369a1"/>
+    <rect x="410" y="190" width="16" height="50" rx="3" fill="#0369a1"/>
+
+    <!-- Blue Top Lid -->
+    <rect x="80" y="70" width="340" height="55" rx="8" fill="url(#lidBlue)" stroke="#075985" stroke-width="1.5"/>
+
+    <!-- Float Level Indicators (6 Ceramic Floats) -->
+    <g transform="translate(110, 42)">
+      <!-- 1 -->
+      <rect x="10" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="16" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="16" cy="22" r="3" fill="#22c55e"/>
+      <!-- 2 -->
+      <rect x="52" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="58" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="58" cy="22" r="3" fill="#22c55e"/>
+      <!-- 3 -->
+      <rect x="94" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="100" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="100" cy="22" r="3" fill="#22c55e"/>
+      <!-- 4 -->
+      <rect x="174" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="180" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="180" cy="22" r="3" fill="#22c55e"/>
+      <!-- 5 -->
+      <rect x="216" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="222" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="222" cy="22" r="3" fill="#22c55e"/>
+      <!-- 6 -->
+      <rect x="258" y="0" width="12" height="32" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="264" cy="10" r="4" fill="#ef4444"/>
+      <circle cx="264" cy="22" r="3" fill="#22c55e"/>
+    </g>
+
+    <!-- Terminals -->
+    <rect x="100" y="30" width="22" height="38" rx="3" fill="#dc2626"/>
+    <text x="111" y="55" fill="#ffffff" font-weight="900" font-size="16" text-anchor="middle">+</text>
+
+    <rect x="378" y="30" width="22" height="38" rx="3" fill="#1e293b"/>
+    <text x="389" y="55" fill="#ffffff" font-weight="900" font-size="18" text-anchor="middle">−</text>
+
+    <!-- Front Label Artwork -->
+    <rect x="110" y="145" width="280" height="270" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="2"/>
+    <rect x="115" y="150" width="270" height="4" fill="#0284c7"/>
+
+    <!-- Inva Power Brand -->
+    <g transform="translate(130, 195)">
+      <text x="0" y="0" fill="#ffffff" font-family="Impact, Arial Black, sans-serif" font-weight="900" font-size="30" letter-spacing="2">INVA POWER</text>
+      <rect x="0" y="7" width="140" height="3" fill="#0284c7"/>
+      <text x="0" y="24" fill="#38bdf8" font-family="Arial, sans-serif" font-weight="800" font-size="11" letter-spacing="2">TALL TUBULAR LEAD-ACID</text>
+    </g>
+
+    <!-- Model highlight -->
+    <g transform="translate(130, 255)">
+      <rect x="0" y="-18" width="160" height="28" rx="4" fill="url(#lidBlue)"/>
+      <text x="80" y="2" fill="#ffffff" font-family="Impact, Arial Black, sans-serif" font-weight="900" font-size="18" letter-spacing="2" text-anchor="middle">ULTRA BACKUP</text>
+      <text x="0" y="30" fill="#94a3b8" font-family="Arial, sans-serif" font-size="11" font-weight="600">HOME &amp; COMMERCIAL INVERTERS</text>
+    </g>
+
+    <!-- Specs grid -->
+    <g transform="translate(130, 310)">
+      <rect x="0" y="0" width="115" height="42" rx="4" fill="#1e293b" stroke="#334155"/>
+      <text x="57" y="16" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">CAPACITY RANGE</text>
+      <text x="57" y="33" fill="#38bdf8" font-family="Arial, sans-serif" font-weight="800" font-size="14" text-anchor="middle">150 - 220 Ah</text>
+
+      <rect x="125" y="0" width="115" height="42" rx="4" fill="#1e293b" stroke="#334155"/>
+      <text x="182" y="16" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">WARRANTY</text>
+      <text x="182" y="33" fill="#4ade80" font-family="Arial, sans-serif" font-weight="800" font-size="14" text-anchor="middle">60 MONTHS</text>
+    </g>
+
+    <g transform="translate(130, 365)">
+      <rect x="0" y="0" width="240" height="36" rx="4" fill="#1e293b" stroke="#334155"/>
+      <text x="120" y="15" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">⚡ ULTRA LOW MAINTENANCE</text>
+      <text x="120" y="28" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8.5" text-anchor="middle">Extra Acid Volume • Fast Recharge Cycle</text>
+    </g>
+
+    <!-- Float Level Guide on Battery -->
+    <g transform="translate(130, 430)">
+      <rect x="0" y="0" width="240" height="26" rx="3" fill="#e2e8f0"/>
+      <circle cx="20" cy="13" r="5" fill="#22c55e"/>
+      <text x="32" y="17" fill="#1e293b" font-family="Arial, sans-serif" font-size="9" font-weight="bold">OK</text>
+      <circle cx="80" cy="13" r="5" fill="#ef4444"/>
+      <text x="92" y="17" fill="#1e293b" font-family="Arial, sans-serif" font-size="9" font-weight="bold">TOP-UP</text>
+      <text x="175" y="17" fill="#475569" font-family="Arial, sans-serif" font-size="8.5">Float Indicator Guide</text>
+    </g>
+  </g>
+</svg>

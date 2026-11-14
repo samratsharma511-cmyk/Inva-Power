@@ -551,6 +551,7 @@ let state = {
   },
   lastConfirmedOrder: null
 };
+window.state = state;
 
 // APPLICATION INITIALIZATION (SAFELY EXECUTES WHETHER DOM IS ALREADY LOADED OR STILL LOADING)
 function initApp() {
@@ -882,31 +883,43 @@ window.resetFilters = function() {
   renderProductGrid();
 };
 
+window.filterCategoryFromNav = function(cat) {
+  state.categoryFilter = cat;
+  const categoryTabs = document.querySelectorAll('[data-category-filter]');
+  categoryTabs.forEach(tab => {
+    if (tab.getAttribute('data-category-filter') === cat) {
+      tab.classList.add('active-category-tab');
+    } else {
+      tab.classList.remove('active-category-tab');
+    }
+  });
+  renderProductGrid();
+};
+
 // CART MANAGEMENT
+window.toggleCartDrawer = function(show) {
+  const cartBackdrop = document.getElementById('cart-backdrop');
+  const cartDrawer = document.getElementById('cart-drawer');
+  if (show) {
+    if (typeof renderCartItems === 'function') renderCartItems();
+    if (cartBackdrop) cartBackdrop.classList.remove('hidden');
+    if (cartDrawer) cartDrawer.classList.remove('translate-x-full');
+  } else {
+    if (cartDrawer) cartDrawer.classList.add('translate-x-full');
+    if (cartBackdrop) setTimeout(() => cartBackdrop.classList.add('hidden'), 300);
+  }
+};
+
 function setupCartEvents() {
   const openCartBtn = document.getElementById('open-cart-btn');
   const closeCartBtn = document.getElementById('close-cart-btn');
   const cartBackdrop = document.getElementById('cart-backdrop');
-  const cartDrawer = document.getElementById('cart-drawer');
 
-  const toggleCart = (show) => {
-    if (show) {
-      renderCartItems();
-      cartBackdrop.classList.remove('hidden');
-      cartDrawer.classList.remove('translate-x-full');
-    } else {
-      cartDrawer.classList.add('translate-x-full');
-      setTimeout(() => cartBackdrop.classList.add('hidden'), 300);
-    }
-  };
-
-  if (openCartBtn) openCartBtn.addEventListener('click', () => toggleCart(true));
-  if (closeCartBtn) closeCartBtn.addEventListener('click', () => toggleCart(false));
+  if (openCartBtn) openCartBtn.addEventListener('click', () => window.toggleCartDrawer(true));
+  if (closeCartBtn) closeCartBtn.addEventListener('click', () => window.toggleCartDrawer(false));
   if (cartBackdrop) cartBackdrop.addEventListener('click', (e) => {
-    if (e.target === cartBackdrop) toggleCart(false);
+    if (e.target === cartBackdrop) window.toggleCartDrawer(false);
   });
-
-  window.toggleCartDrawer = toggleCart;
 }
 
 window.addToCart = function(productId, openDrawer = true) {
@@ -1140,6 +1153,13 @@ window.closeCheckoutModal = function() {
     modal.classList.add('hidden');
     modal.style.display = 'none';
   }
+};
+
+window.goToCheckoutStep = function(step) {
+  state.activeCheckoutStep = step;
+  renderCheckoutStep();
+  const modal = document.getElementById('checkout-modal');
+  if (modal) modal.scrollTop = 0;
 };
 
 function renderCheckoutStep() {
@@ -1430,7 +1450,7 @@ function renderCheckoutStep() {
         </div>
 
         <div class="flex items-center justify-between pt-3 border-t border-gray-800">
-          <button type="button" onclick="state.activeCheckoutStep = 1; renderCheckoutStep();" class="px-4 py-2 text-xs font-bold text-gray-400 hover:text-white">
+          <button type="button" onclick="window.goToCheckoutStep(1)" class="px-4 py-2 text-xs font-bold text-gray-400 hover:text-white cursor-pointer">
             <i class="fa-solid fa-arrow-left"></i> Back to Address
           </button>
 
@@ -2101,4 +2121,16 @@ window.switchHeroTab = function(type) {
     ctaBtn.onclick = function() { addToCart('inva-inverter-150', true); };
   }
 };
+
+// Global handlers export
+window.initApp = initApp;
+window.renderProductGrid = renderProductGrid;
+window.renderCheckoutStep = renderCheckoutStep;
+window.renderCartItems = renderCartItems;
+window.updateCartBadge = updateCartBadge;
+window.setupScrapCalculator = setupScrapCalculator;
+window.setupFilterListeners = setupFilterListeners;
+window.setupFinderWidget = setupFinderWidget;
+window.showToastNotification = showToastNotification;
+
 

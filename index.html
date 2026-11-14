@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inva Power Batteries | Truck, Tractor, Inverter &amp; Bike Lead-Acid Batteries</title>
+  <meta name="description" content="Shop Inva Power heavy duty lead-acid batteries. Express Truck batteries, Jai Kisan Tractor batteries, Tall Tubular Inverters & Bike batteries with Online Payment and COD.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#ff3b30',
+            brandDark: '#0b0f17',
+            brandCard: '#111827',
+            brandGreen: '#16a34a',
+            brandBlue: '#0284c7'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0b0f17] text-gray-100 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ================= TOP ANNOUNCEMENT TICKER ================= -->
+  <aside aria-label="Announcements" class="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white text-xs font-semibold py-2 px-4 shadow-sm relative z-40">
+    <div class="ticker-wrap flex items-center justify-between max-w-7xl mx-auto">
+      <div class="ticker-content flex items-center gap-12 font-medium tracking-wide">
+        <span>🚚 <strong>FREE SAME-DAY DOORSTEP FITMENT</strong> on all Inverter &amp; Commercial Batteries</span>
+        <span>🛡️ <strong>UP TO 60 MONTHS NATIONWIDE REPLACEMENT GUARANTEE</strong> with digital warranty registration</span>
+        <span>♻️ <strong>INSTANT SCRAP BATTERY CASHBACK:</strong> Save ₹1,000 to ₹2,500 on your old battery</span>
+        <span>💳 <strong>ONLINE PAYMENT &amp; CASH ON DELIVERY (COD):</strong> Pay at doorstep after free testing</span>
+        <span>📞 <strong>24x7 TOLL-FREE HELPLINE:</strong> 1800-890-INVA (4682)</span>
+        <!-- Duplicated for seamless marquee loop -->
+        <span>🚚 <strong>FREE SAME-DAY DOORSTEP FITMENT</strong> on all Inverter &amp; Commercial Batteries</span>
+        <span>🛡️ <strong>UP TO 60 MONTHS NATIONWIDE REPLACEMENT GUARANTEE</strong> with digital warranty registration</span>
+        <span>♻️ <strong>INSTANT SCRAP BATTERY CASHBACK:</strong> Save ₹1,000 to ₹2,500 on your old battery</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= STICKY HEADER & NAV ================= -->
+  <header class="sticky top-0 z-50 glass-nav transition-all border-b border-gray-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo (Firmly positioned within navbar bounds) -->
+      <a href="#" class="flex items-center gap-3 flex-shrink-0 group py-1">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-red-600/30 group-hover:scale-105 transition flex-shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-lg sm:text-xl"></i>
+        </div>
+        <div class="flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 leading-none">
+            <span class="text-xl sm:text-2xl font-black text-white tracking-tight heading-font group-hover:text-red-400 transition">
+              INVA POWER
+            </span>
+            <span class="text-[9px] bg-red-600/25 text-red-400 border border-red-500/40 px-1 py-0.5 rounded font-sans font-bold leading-none">TM</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] text-gray-400 tracking-wider uppercase font-semibold mt-1 leading-none">
+            LEAD-ACID BATTERIES
+          </span>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links -->
+      <nav class="hidden xl:flex items-center gap-5 text-xs font-bold text-gray-300 flex-shrink-0">
+        <a href="#collection-section" class="hover:text-red-400 transition">ALL BATTERIES</a>
+        <a href="#inverter-showcase" class="text-sky-400 hover:text-sky-300 transition flex items-center gap-1 font-extrabold bg-sky-950/40 px-2.5 py-1 rounded-lg border border-sky-500/30">
+          <i class="fa-solid fa-plug-circle-bolt text-sky-400"></i> INVERTER (150-220Ah)
+        </a>
+        <a href="#collection-section" onclick="filterCategoryFromNav('truck')" class="hover:text-red-400 transition flex items-center gap-1">
+          <i class="fa-solid fa-truck text-red-500"></i> TRUCK (EXPRESS)
+        </a>
+        <a href="#collection-section" onclick="filterCategoryFromNav('tractor')" class="hover:text-red-400 transition flex items-center gap-1">
+          <i class="fa-solid fa-tractor text-green-500"></i> TRACTOR (JAI KISAN)
+        </a>
+        <a href="#vehicle-finder-section" class="hover:text-red-400 transition">BATTERY FINDER</a>
+        <a href="#scrap-calculator-section" class="hover:text-red-400 transition text-emerald-400">SCRAP REBATE</a>
+      </nav>
+
+      <!-- Right Header Actions (Search & Cart) -->
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <!-- Live Search Input -->
+        <div class="relative hidden sm:block w-44 md:w-56">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search inverter, truck..." 
+            class="w-full bg-gray-900/90 border border-gray-700/80 rounded-xl pl-9 pr-3 py-2 text-xs text-white focus:outline-none focus:border-red-500 placeholder:text-gray-500 transition"
+          >
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-gray-500 text-xs"></i>
+        </div>
+
+        <!-- Ultra-Prominent Navbar Cart Button -->
+        <button 
+          id="open-cart-btn" 
+          onclick="window.toggleCartDrawer && window.toggleCartDrawer(true)"
+          class="relative px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 active:scale-95 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-red-600/40 border border-red-400/40 transition flex items-center gap-2 flex-shrink-0 cursor-pointer"
+          title="Open Shopping Cart"
+        >
+          <i class="fa-solid fa-cart-shopping text-sm sm:text-base"></i>
+          <span class="font-black tracking-wide">CART</span>
+          <span 
+            id="cart-badge-count" 
+            class="bg-white text-red-700 px-2 py-0.5 rounded-full text-xs font-black min-w-[20px] text-center shadow-md leading-none"
+          >
+            0
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= SELKIRK STYLE HERO COLLECTION BANNER ================= -->
+  <section class="relative hero-glow pt-10 pb-16 border-b border-gray-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-xs text-gray-400 mb-6">
+        <a href="#" class="hover:text-white transition">Home</a>
+        <span>/</span>
+        <a href="#collection-section" class="hover:text-white transition">Lead-Acid Batteries</a>
+        <span>/</span>
+        <span class="text-red-400 font-semibold">Inva Power Flagship Series</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/10 border border-red-500/30 text-red-400 text-xs font-bold mb-4 uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            India's High-Torque Heavy Duty Battery Powerhouse
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white heading-font tracking-tight leading-[1.1] mb-5">
+            POWER ENGINEERED <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-amber-500 to-yellow-400">
+              FOR UNSTOPPABLE RUNS.
+            </span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-gray-300 max-w-2xl font-normal leading-relaxed mb-8">
+            Experience factory-direct pricing on premium lead-acid batteries. From 
+            <strong class="text-white">Inva Power "Express"</strong> heavy commercial truck batteries to 
+            <strong class="text-white">"Jai Kisan"</strong> farm tractor batteries and deep-cycle 
+            <strong class="text-white">Tall Tubular Inverter</strong> units. Backed with up to 60 Months Warranty, online instant checkout, and verified Cash on Delivery.
+          </p>
+
+          <!-- Quick Feature Matrix -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <div class="bg-gray-900/90 border border-gray-800 p-3 rounded-xl">
+              <i class="fa-solid fa-atom text-red-500 text-base mb-1"></i>
+              <div class="text-[11px] font-bold text-white">99.99% Virgin Lead</div>
+              <div class="text-[10px] text-gray-400">Zero recycled scrap oxide</div>
+            </div>
+            <div class="bg-gray-900/90 border border-gray-800 p-3 rounded-xl">
+              <i class="fa-solid fa-shield-halved text-emerald-400 text-base mb-1"></i>
+              <div class="text-[11px] font-bold text-white">Up to 60M Warranty</div>
+              <div class="text-[10px] text-gray-400">Nationwide replacement</div>
+            </div>
+            <div class="bg-gray-900/90 border border-gray-800 p-3 rounded-xl">
+              <i class="fa-solid fa-truck-ramp-box text-sky-400 text-base mb-1"></i>
+              <div class="text-[11px] font-bold text-white">Free Doorstep Fitment</div>
+              <div class="text-[10px] text-gray-400">Technician testing included</div>
+            </div>
+            <div class="bg-gray-900/90 border border-gray-800 p-3 rounded-xl">
+              <i class="fa-solid fa-hand-holding-dollar text-amber-400 text-base mb-1"></i>
+              <div class="text-[11px] font-bold text-white">Online &amp; COD</div>
+              <div class="text-[10px] text-gray-400">UPI, Cards or Pay on Delivery</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#collection-section" class="px-7 py-3.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-xl shadow-red-600/30 transition flex items-center gap-2">
+              <i class="fa-solid fa-bolt"></i> Shop Inva Power Series
+            </a>
+            <a href="#vehicle-finder-section" class="px-6 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl border border-gray-700 hover:border-gray-500 transition flex items-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i> Find My Battery Match
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Product Showcase Cards (Selkirk style hero preview) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative bg-gradient-to-tr from-gray-950 via-gray-900 to-gray-850 p-6 rounded-3xl border border-gray-800 shadow-2xl overflow-hidden">
+            
+            <!-- Hero Switcher: Express Truck vs Inverter Tall Tubular -->
+            <div class="flex items-center gap-1.5 p-1 bg-gray-900 rounded-xl border border-gray-800 mb-4">
+              <button 
+                id="hero-tab-truck" 
+                onclick="switchHeroTab('truck')" 
+                class="flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition bg-red-600 text-white shadow"
+              >
+                🚛 Truck (Express 180Ah)
+              </button>
+              <button 
+                id="hero-tab-inverter" 
+                onclick="switchHeroTab('inverter')" 
+                class="flex-1 py-1.5 px-3 rounded-lg text-xs font-bold transition text-gray-400 hover:text-white"
+              >
+                ⚡ Inverter (150-220Ah)
+              </button>
+            </div>
+
+            <!-- Dynamic Hero Preview Card -->
+            <div id="hero-showcase-content">
+              <div class="flex items-center justify-between mb-2">
+                <span id="hero-badge" class="text-xs font-black uppercase text-red-500 tracking-wider flex items-center gap-1.5">
+                  <i class="fa-solid fa-crown text-amber-400"></i> OUR SIGNATURE FLAGSHIP
+                </span>
+                <span id="hero-price-tag" class="text-xs bg-red-600/20 text-red-400 font-bold px-2 py-0.5 rounded border border-red-500/30">
+                  180 Ah • ₹11,500
+                </span>
+              </div>
+
+              <!-- Battery Visual Render -->
+              <div class="py-3 flex items-center justify-center">
+                <img id="hero-battery-img" src="assets/inva-truck-express.svg" alt="Inva Power Battery" class="h-52 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+              </div>
+
+              <!-- Quick Specs Row -->
+              <div id="hero-specs-row" class="grid grid-cols-3 gap-2 text-center bg-gray-950/70 p-3 rounded-xl border border-gray-800 text-xs mb-3">
+                <div>
+                  <span class="text-gray-400 block text-[10px]">SERIES</span>
+                  <span id="hero-spec-series" class="font-bold text-white">EXPRESS</span>
+                </div>
+                <div>
+                  <span class="text-gray-400 block text-[10px]">APPLICATION</span>
+                  <span id="hero-spec-type" class="font-bold text-amber-400">HEAVY TRUCK</span>
+                </div>
+                <div>
+                  <span class="text-gray-400 block text-[10px]">WITH SCRAP</span>
+                  <span id="hero-spec-scrap" class="font-bold text-emerald-400">₹9,300</span>
+                </div>
+              </div>
+
+              <!-- Action button -->
+              <button id="hero-cta-btn" onclick="addToCart('inva-truck-180', true)" class="w-full py-2.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-1.5 shadow-lg shadow-red-700/30">
+                <i class="fa-solid fa-cart-plus"></i> Add Express 180Ah to Cart (₹11,500)
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE VEHICLE & APPLIANCE FINDER WIDGET ================= -->
+  <section id="vehicle-finder-section" class="py-12 bg-gray-950 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-r from-gray-900 via-gray-900 to-gray-850 p-6 md:p-8 rounded-2xl border border-gray-800 shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <h2 class="text-xl md:text-2xl font-black text-white heading-font flex items-center gap-2">
+              <i class="fa-solid fa-car-battery text-red-500"></i> EXACT FITMENT BATTERY FINDER
+            </h2>
+            <p class="text-xs text-gray-400 mt-1">Select your vehicle type, tractor model, or home inverter load for guaranteed fitment &amp; CCA assurance.</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1.5 rounded-lg">
+            <i class="fa-solid fa-circle-check"></i> 100% Fitment Guarantee
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- Step 1: Battery Category -->
+          <div>
+            <label class="block text-xs font-bold text-gray-300 uppercase mb-1.5">1. Select Application / Type</label>
+            <select id="finder-type" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-3 text-xs font-semibold text-white focus:outline-none focus:border-red-500">
+              <option value="truck">Commercial Truck &amp; Heavy Vehicle (Express)</option>
+              <option value="tractor">Agricultural Tractor (Jai Kisan)</option>
+              <option value="inverter">Home &amp; Shop Inverter (Tall Tubular)</option>
+              <option value="bike">Motorcycle &amp; Scooter (2-Wheeler)</option>
+            </select>
+          </div>
+
+          <!-- Step 2: Make & Model -->
+          <div>
+            <label class="block text-xs font-bold text-gray-300 uppercase mb-1.5">2. Vehicle / Appliance Make</label>
+            <select id="finder-make" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-3.5 py-3 text-xs font-semibold text-white focus:outline-none focus:border-red-500">
+              <option value="Tata Motors (Signa, Prima, LPT)">Tata Motors (Signa, Prima, 1613, 1109)</option>
+              <option value="Ashok Leyland (Boss, Captain, 4220)">Ashok Leyland (Boss, Captain, 4220, Ecomet)</option>
+              <option value="BharatBenz">BharatBenz (3528C, 2823R, 1923C)</option>
+              <option value="JCB Earthmovers">JCB &amp; Heavy Earthmovers (3DX, Loader)</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Button -->
+          <div class="flex items-end">
+            <button id="finder-submit-btn" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-700/30 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i> Show Matching Batteries
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MAIN PRODUCT COLLECTION SECTION (SELKIRK STYLE) ================= -->
+  <main id="collection-section" class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Title & Summary -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <div class="text-xs font-black tracking-widest text-red-500 uppercase mb-1">
+          OFFICIAL COLLECTION
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white heading-font">
+          HEAVY DUTY BATTERIES
+        </h2>
+        <p class="text-xs text-gray-400 mt-1 max-w-xl">
+          Featuring our brand <strong>Inva Power</strong> with commercial <strong>"Express"</strong> trucks, agricultural <strong>"Jai Kisan"</strong> tractors, tall tubular inverters, and benchmark models from Exide &amp; Luminous.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Results count badge -->
+        <span id="results-count" class="text-xs font-mono font-bold bg-gray-900 border border-gray-800 text-gray-300 px-3 py-1.5 rounded-lg">
+          Loading...
+        </span>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs (Selkirk Style Pill Selectors) -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-6">
+      <button 
+        data-category-filter="all" 
+        class="active-category-tab px-4 py-2.5 rounded-xl border border-gray-800 bg-gray-900 text-xs font-bold whitespace-nowrap transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-layer-group"></i> All Batteries
+      </button>
+
+      <button 
+        data-category-filter="truck" 
+        class="px-4 py-2.5 rounded-xl border border-gray-800 bg-gray-900 hover:border-gray-700 text-xs font-bold text-gray-300 whitespace-nowrap transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-truck text-red-500"></i> Truck Battery (Express Series)
+      </button>
+
+      <button 
+        data-category-filter="tractor" 
+        class="px-4 py-2.5 rounded-xl border border-gray-800 bg-gray-900 hover:border-gray-700 text-xs font-bold text-gray-300 whitespace-nowrap transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-tractor text-green-500"></i> Tractor Battery (Jai Kisan)
+      </button>
+
+      <button 
+        data-category-filter="inverter" 
+        class="px-4 py-2.5 rounded-xl border border-gray-800 bg-gray-900 hover:border-gray-700 text-xs font-bold text-gray-300 whitespace-nowrap transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-plug-circle-bolt text-blue-500"></i> Inverter Battery (Tall Tubular)
+      </button>
+
+      <button 
+        data-category-filter="bike" 
+        class="px-4 py-2.5 rounded-xl border border-gray-800 bg-gray-900 hover:border-gray-700 text-xs font-bold text-gray-300 whitespace-nowrap transition flex items-center gap-2"
+      >
+        <i class="fa-solid fa-motorcycle text-amber-500"></i> Bike Battery (VRLA AGM)
+      </button>
+    </div>
+
+    <!-- ================= DEDICATED INVA POWER INVERTER BATTERY SHOWCASE ================= -->
+    <div id="inverter-showcase" class="mb-12 bg-gradient-to-b from-sky-950/30 via-gray-900 to-gray-900 rounded-3xl border border-sky-500/30 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Inverter Showcase Header -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8 relative z-10">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/15 border border-sky-500/30 text-sky-400 text-xs font-black uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-plug-circle-bolt"></i> INVA POWER HOME &amp; COMMERCIAL INVERTERS
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-black text-white heading-font">
+            TALL TUBULAR LEAD-ACID INVERTER SERIES
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-300 mt-1 max-w-2xl">
+            Factory-direct pricing on heavy-duty tall tubular inverter batteries. Engineered with 100-bar spine casting, 6 ceramic float level indicators, and 60 Months Warranty.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-bold text-sky-300 bg-sky-950/60 border border-sky-500/30 px-3.5 py-2 rounded-xl flex items-center gap-2">
+            <i class="fa-solid fa-shield-halved text-emerald-400 text-sm"></i> 60 Months Replacement Guarantee
+          </span>
+        </div>
+      </div>
+
+      <!-- 4 Inverter Capacity Cards Grid (150Ah, 180Ah, 200Ah, 220Ah) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+        
+        <!-- 1. 150 Ah -->
+        <div class="bg-gray-950/90 rounded-2xl border border-sky-500/30 hover:border-sky-400/70 p-5 flex flex-col justify-between card-hover-effect group transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-sky-500/20 text-sky-400 border border-sky-500/40">
+                TOP SELLER
+              </span>
+              <span class="text-xs font-mono font-bold text-gray-400">12V • 150Ah</span>
+            </div>
+
+            <div class="py-3 flex justify-center">
+              <img src="assets/inva-inverter-tubular.svg" alt="Inva Power 150Ah" class="h-36 w-auto object-contain group-hover:scale-105 transition duration-300" />
+            </div>
+
+            <h4 class="text-sm font-bold text-white group-hover:text-sky-400 transition">Inva Power 150Ah Tall Tubular</h4>
+            <p class="text-[11px] text-gray-400 mt-1">4-5 Hours Continuous Backup (Fans, LEDs, TV, Wi-Fi)</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-800">
+            <div class="flex items-baseline justify-between mb-1">
+              <span class="text-2xl font-black text-white font-mono">₹9,000</span>
+              <span class="text-xs text-gray-500 line-through">₹12,500</span>
+            </div>
+            <div class="text-[11px] text-emerald-400 font-semibold mb-3 flex items-center justify-between bg-emerald-950/30 px-2 py-1 rounded">
+              <span>With Old Scrap:</span>
+              <span class="font-bold font-mono">₹7,200</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('inva-inverter-150', false)" class="py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-lg transition border border-gray-700">
+                + Cart
+              </button>
+              <button onclick="buyNow('inva-inverter-150')" class="py-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-lg transition shadow-md shadow-sky-700/30">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. 180 Ah -->
+        <div class="bg-gray-950/90 rounded-2xl border border-sky-500/30 hover:border-sky-400/70 p-5 flex flex-col justify-between card-hover-effect group transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                EXTRA BACKUP
+              </span>
+              <span class="text-xs font-mono font-bold text-gray-400">12V • 180Ah</span>
+            </div>
+
+            <div class="py-3 flex justify-center">
+              <img src="assets/inva-inverter-tubular.svg" alt="Inva Power 180Ah" class="h-36 w-auto object-contain group-hover:scale-105 transition duration-300" />
+            </div>
+
+            <h4 class="text-sm font-bold text-white group-hover:text-sky-400 transition">Inva Power 180Ah Tall Tubular</h4>
+            <p class="text-[11px] text-gray-400 mt-1">6-7 Hours Backup for frequent &amp; extended power cuts</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-800">
+            <div class="flex items-baseline justify-between mb-1">
+              <span class="text-2xl font-black text-white font-mono">₹10,500</span>
+              <span class="text-xs text-gray-500 line-through">₹14,200</span>
+            </div>
+            <div class="text-[11px] text-emerald-400 font-semibold mb-3 flex items-center justify-between bg-emerald-950/30 px-2 py-1 rounded">
+              <span>With Old Scrap:</span>
+              <span class="font-bold font-mono">₹8,500</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('inva-inverter-180', false)" class="py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-lg transition border border-gray-700">
+                + Cart
+              </button>
+              <button onclick="buyNow('inva-inverter-180')" class="py-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-lg transition shadow-md shadow-sky-700/30">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. 200 Ah -->
+        <div class="bg-gray-950/90 rounded-2xl border border-sky-500/30 hover:border-sky-400/70 p-5 flex flex-col justify-between card-hover-effect group transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                HEAVY LOAD
+              </span>
+              <span class="text-xs font-mono font-bold text-gray-400">12V • 200Ah</span>
+            </div>
+
+            <div class="py-3 flex justify-center">
+              <img src="assets/inva-inverter-tubular.svg" alt="Inva Power 200Ah" class="h-36 w-auto object-contain group-hover:scale-105 transition duration-300" />
+            </div>
+
+            <h4 class="text-sm font-bold text-white group-hover:text-sky-400 transition">Inva Power 200Ah Tall Tubular</h4>
+            <p class="text-[11px] text-gray-400 mt-1">8-9 Hours Backup for refrigerators &amp; large households</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-800">
+            <div class="flex items-baseline justify-between mb-1">
+              <span class="text-2xl font-black text-white font-mono">₹12,500</span>
+              <span class="text-xs text-gray-500 line-through">₹16,800</span>
+            </div>
+            <div class="text-[11px] text-emerald-400 font-semibold mb-3 flex items-center justify-between bg-emerald-950/30 px-2 py-1 rounded">
+              <span>With Old Scrap:</span>
+              <span class="font-bold font-mono">₹10,200</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('inva-inverter-200', false)" class="py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-lg transition border border-gray-700">
+                + Cart
+              </button>
+              <button onclick="buyNow('inva-inverter-200')" class="py-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-lg transition shadow-md shadow-sky-700/30">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. 220 Ah -->
+        <div class="bg-gray-950/90 rounded-2xl border border-sky-500/30 hover:border-sky-400/70 p-5 flex flex-col justify-between card-hover-effect group transition">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/40">
+                JUMBO MONSTER
+              </span>
+              <span class="text-xs font-mono font-bold text-gray-400">12V • 220Ah</span>
+            </div>
+
+            <div class="py-3 flex justify-center">
+              <img src="assets/inva-inverter-tubular.svg" alt="Inva Power 220Ah" class="h-36 w-auto object-contain group-hover:scale-105 transition duration-300" />
+            </div>
+
+            <h4 class="text-sm font-bold text-white group-hover:text-sky-400 transition">Inva Power 220Ah Jumbo Tubular</h4>
+            <p class="text-[11px] text-gray-400 mt-1">10+ Hours Maximum Duration for commercial &amp; solar backup</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-gray-800">
+            <div class="flex items-baseline justify-between mb-1">
+              <span class="text-2xl font-black text-white font-mono">₹13,500</span>
+              <span class="text-xs text-gray-500 line-through">₹18,500</span>
+            </div>
+            <div class="text-[11px] text-emerald-400 font-semibold mb-3 flex items-center justify-between bg-emerald-950/30 px-2 py-1 rounded">
+              <span>With Old Scrap:</span>
+              <span class="font-bold font-mono">₹11,000</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="addToCart('inva-inverter-220', false)" class="py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-lg transition border border-gray-700">
+                + Cart
+              </button>
+              <button onclick="buyNow('inva-inverter-220')" class="py-2 bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs rounded-lg transition shadow-md shadow-sky-700/30">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Filter Control Bar: Brands, Capacity & Sorting -->
+    <div class="bg-gray-950 p-4 rounded-2xl border border-gray-800/80 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      
+      <!-- Brand Chips -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs font-bold text-gray-400 mr-1 uppercase">Brand:</span>
+        <button data-brand-filter="all" class="active-brand-chip px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-gray-950 transition">
+          All Brands
+        </button>
+        <button data-brand-filter="Inva Power" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-900 hover:bg-gray-800 text-red-400 border border-red-500/30 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-bolt"></i> Inva Power (Flagship)
+        </button>
+        <button data-brand-filter="Exide" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-900 hover:bg-gray-800 text-gray-300 border border-gray-700 transition">
+          Exide
+        </button>
+        <button data-brand-filter="Luminous" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-900 hover:bg-gray-800 text-gray-300 border border-gray-700 transition">
+          Luminous
+        </button>
+      </div>
+
+      <!-- Capacity & Sort Dropdowns -->
+      <div class="flex items-center gap-3">
+        <!-- Capacity selector -->
+        <select id="capacity-select" class="bg-gray-900 border border-gray-800 text-xs font-medium text-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:border-red-500">
+          <option value="all">Capacity: All Ah</option>
+          <option value="low">Under 100 Ah (Bike &amp; Mini)</option>
+          <option value="mid">100 Ah - 165 Ah (Mid Haul / Farm)</option>
+          <option value="high">180 Ah - 220 Ah (Heavy / Inverter)</option>
+        </select>
+
+        <!-- Sorting selector -->
+        <select id="sort-select" class="bg-gray-900 border border-gray-800 text-xs font-medium text-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:border-red-500">
+          <option value="featured">Sort: Inva Power Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="capacity-high">Capacity: High to Low</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Product Grid Container -->
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Injected by app.js -->
+    </div>
+
+  </main>
+
+  <!-- ================= INVA POWER ADVANTAGE (SELKIRK COMPARISON STYLE) ================= -->
+  <section class="py-16 bg-gradient-to-b from-gray-950 to-gray-900 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-black uppercase tracking-widest text-red-500">ENGINEERED FOR INDIA</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white heading-font mt-1">
+          WHY FLEETS &amp; HOMES CHOOSE INVA POWER
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-400 mt-2">
+          Compare our industrial specifications with ordinary commercial batteries. Built to withstand high summer ambient temperatures, uneven roads, and deep discharge cycles.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 relative group hover:border-red-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center text-2xl mb-4 border border-red-500/20">
+            <i class="fa-solid fa-cubes-stacked"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">99.99% Virgin Lead Alloy</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            While low-cost batteries rely on recycled lead oxide that sulphates quickly, Inva Power uses primary electrolytic virgin lead with selenium-antimony chemistry to prevent grid corrosion.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 relative group hover:border-red-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center text-2xl mb-4 border border-emerald-500/20">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">High Pressure Spine Casting (100 Bar)</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Our tall tubular inverter batteries are manufactured using 100 bar high pressure die casting. This eliminates micro-voids, providing up to 1,500 discharge cycles at 80% DOD.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-gray-900/80 p-6 rounded-2xl border border-gray-800 relative group hover:border-red-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-sky-600/10 text-sky-400 flex items-center justify-center text-2xl mb-4 border border-sky-500/20">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Vibration-Proof Poly-Ribbed Case</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            The Express truck and Jai Kisan tractor series feature heavy-duty PP copolymer ribbed casings designed to withstand severe agricultural and mining vibrations without shedding active plate material.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SCRAP BATTERY VALUE CALCULATOR (WEIGHT BASED @ ₹120/KG) ================= -->
+  <section id="scrap-calculator-section" class="py-14 bg-gray-950 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-r from-emerald-950/40 via-gray-900 to-gray-900 p-8 rounded-3xl border border-emerald-500/30 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-black uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-recycle"></i> FIXED SCRAP RATE: ₹120 / KG
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-black text-white heading-font">
+            OLD BATTERY SCRAP VALUE CALCULATOR
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed">
+            Get guaranteed scrap value for your dead battery. Enter your battery weight in kilograms to instantly see your cash rebate at our official rate of <strong class="text-emerald-400">₹120 per kg</strong>. Our delivery technician will weigh your battery on a digital scale and deduct the amount immediately from your invoice!
+          </p>
+          <div class="mt-4 flex items-center gap-3 text-xs text-gray-400">
+            <span><i class="fa-solid fa-scale-balanced text-emerald-400"></i> Certified Digital Scale</span>
+            <span>•</span>
+            <span><i class="fa-solid fa-money-bill-wave text-emerald-400"></i> Instant Bill Discount or Cash</span>
+          </div>
+        </div>
+
+        <!-- Interactive Weight-Based Calculator Widget -->
+        <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 w-full lg:w-[420px] shadow-2xl">
+          <div class="space-y-4">
+            
+            <!-- Rate Banner -->
+            <div class="bg-emerald-950/60 border border-emerald-500/40 rounded-xl p-3 flex items-center justify-between">
+              <span class="text-xs font-bold text-gray-300 flex items-center gap-2">
+                <i class="fa-solid fa-tag text-emerald-400"></i> Official Lead Scrap Rate:
+              </span>
+              <span class="text-sm font-black text-emerald-400 font-mono bg-emerald-900/50 px-2 py-0.5 rounded border border-emerald-500/50">
+                ₹120 / kg
+              </span>
+            </div>
+
+            <!-- Weight Input -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="calc-weight" class="text-xs font-bold text-gray-200 uppercase">Enter Battery Weight (KG)</label>
+                <span class="text-[11px] text-gray-400">Gross Weight with Acid</span>
+              </div>
+              <div class="relative">
+                <input 
+                  type="number" 
+                  id="calc-weight" 
+                  value="45" 
+                  min="1" 
+                  max="150" 
+                  step="0.5" 
+                  class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-lg font-bold font-mono text-white focus:outline-none focus:border-emerald-500 pr-14"
+                >
+                <span class="absolute right-4 top-3.5 text-xs font-extrabold text-gray-400 font-mono">KG</span>
+              </div>
+            </div>
+
+            <!-- Quick Weight Presets -->
+            <div>
+              <span class="text-[11px] text-gray-400 block mb-1.5">Quick Weight Presets:</span>
+              <div class="grid grid-cols-4 gap-1.5 text-xs">
+                <button type="button" onclick="setScrapWeightPreset(4)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                  4 kg (Bike)
+                </button>
+                <button type="button" onclick="setScrapWeightPreset(24)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                  24 kg (Tractor)
+                </button>
+                <button type="button" onclick="setScrapWeightPreset(45)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                  45 kg (Truck)
+                </button>
+                <button type="button" onclick="setScrapWeightPreset(55)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                  55 kg (Inverter)
+                </button>
+              </div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="pt-3 border-t border-gray-800 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-gray-400 block uppercase font-bold">You Will Receive:</span>
+                <div id="calc-result" class="text-3xl font-black text-emerald-400 font-mono">₹5,400</div>
+                <div id="calc-breakdown" class="text-[11px] text-gray-400 font-mono">45 kg × ₹120/kg</div>
+              </div>
+              <div class="text-right">
+                <span class="text-[11px] text-emerald-300 bg-emerald-950 px-2.5 py-1.5 rounded-lg border border-emerald-500/40 font-bold block">
+                  <i class="fa-solid fa-check"></i> Instant Doorstep Rebate
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FLYOUT CART DRAWER ================= -->
+  <div id="cart-backdrop" class="fixed inset-0 z-50 modal-backdrop-blur hidden transition-opacity duration-300">
+    <div id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-gray-900 border-l border-gray-800 shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out z-50">
+      
+      <!-- Cart Drawer Header -->
+      <div class="p-4 border-b border-gray-800 flex items-center justify-between bg-gray-950">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-cart-shopping text-red-500"></i>
+          <h3 class="text-base font-bold text-white">Your Shopping Cart</h3>
+        </div>
+        <button id="close-cart-btn" class="w-8 h-8 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items List Container -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
+        <!-- Injected by app.js -->
+      </div>
+
+      <!-- Cart Footer & Checkout Button -->
+      <div class="p-4 border-t border-gray-800 bg-gray-950 space-y-3">
+        <div class="space-y-1.5 text-xs">
+          <div class="flex justify-between text-gray-400">
+            <span>Subtotal (Regular MRP Price):</span>
+            <span id="cart-subtotal" class="font-mono text-white">₹0</span>
+          </div>
+          <div class="flex justify-between text-emerald-400 font-semibold">
+            <span>Old Battery Scrap Rebate:</span>
+            <span id="cart-scrap-savings" class="font-mono">- ₹0</span>
+          </div>
+          <div class="flex justify-between text-gray-400">
+            <span>Doorstep Delivery &amp; Fitment:</span>
+            <span class="text-sky-400 font-bold uppercase text-[11px]">FREE</span>
+          </div>
+          <div class="flex justify-between text-base font-black text-white pt-2 border-t border-gray-800">
+            <span>Net Payable:</span>
+            <span id="cart-grand-total" class="font-mono text-red-400 text-lg">₹0</span>
+          </div>
+        </div>
+
+        <button 
+          id="cart-checkout-btn" 
+          onclick="openCheckoutModal()" 
+          class="w-full py-3.5 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-red-700/40 transition flex items-center justify-center gap-2 disabled:opacity-50"
+        >
+          <i class="fa-solid fa-lock"></i> Proceed to Checkout (Online / COD)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT MODAL (ONLINE & COD) ================= -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 modal-backdrop-blur hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden my-8">
+      
+      <!-- Checkout Modal Header -->
+      <div class="p-4 border-b border-gray-800 bg-gray-950 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-red-600/20 text-red-500 flex items-center justify-center text-sm font-black">
+            ⚡
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">Inva Power Express Checkout</h3>
+            <p class="text-[10px] text-gray-400">Secure 256-Bit Encrypted Doorstep Order</p>
+          </div>
+        </div>
+        <button onclick="closeCheckoutModal()" class="w-7 h-7 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Checkout Step Content (Injected by app.js) -->
+      <div id="checkout-step-content" class="p-6">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div id="quickview-modal" class="fixed inset-0 z-50 modal-backdrop-blur hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden my-8 relative">
+      
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div id="quickview-content" class="p-6 md:p-8">
+        <!-- Injected by app.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-950 border-t border-gray-800 text-gray-400 text-xs py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Col 1: About Inva Power -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold">
+              ⚡
+            </div>
+            <span class="text-lg font-black text-white heading-font">INVA POWER</span>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Manufacturer and direct distributor of industrial grade lead-acid batteries. Express commercial truck, Jai Kisan tractor, and Tall Tubular inverter energy storage.
+          </p>
+          <div class="text-emerald-400 font-semibold text-[11px] flex items-center gap-1.5">
+            <i class="fa-solid fa-certificate"></i> ISO 9001:2015 &amp; ISO 14001 Certified
+          </div>
+        </div>
+
+        <!-- Col 2: Brand Series -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Our Battery Series</h4>
+          <ul class="space-y-2">
+            <li><a href="#collection-section" onclick="filterCategoryFromNav('truck')" class="hover:text-red-400 transition">Inva Power "Express" (135Ah - 180Ah Truck)</a></li>
+            <li><a href="#collection-section" onclick="filterCategoryFromNav('tractor')" class="hover:text-red-400 transition">Inva Power "Jai Kisan" (70Ah - 100Ah Tractor)</a></li>
+            <li><a href="#collection-section" onclick="filterCategoryFromNav('inverter')" class="hover:text-red-400 transition">Inva Power Tall Tubular (150Ah - 220Ah Inverter)</a></li>
+            <li><a href="#collection-section" onclick="filterCategoryFromNav('bike')" class="hover:text-red-400 transition">MotoVibe VRLA Bike Batteries (5Ah - 9Ah)</a></li>
+            <li><a href="#collection-section" class="hover:text-red-400 transition">Partner Brands (Exide &amp; Luminous)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Care & Warranties -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Customer Support</h4>
+          <ul class="space-y-2">
+            <li><span class="text-white font-bold">24x7 Helpline:</span> 1800-890-INVA (Toll-Free)</li>
+            <li><span class="text-white font-bold">WhatsApp Service:</span> +91 98765-43210</li>
+            <li><span class="text-white font-bold">Email:</span> support@invapower.com</li>
+            <li><span class="text-white font-bold">Dispatches:</span> Pan-India Logistics</li>
+            <li><a href="#scrap-calculator-section" class="text-emerald-400 hover:underline">Scrap Lead Buyback Program</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Payment & Security Assurance -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Payments &amp; Guarantee</h4>
+          <p class="text-gray-400 mb-3">We accept all major online payment options and verified Cash on Delivery:</p>
+          <div class="flex flex-wrap gap-2 text-xl text-gray-400 mb-4">
+            <i class="fa-brands fa-google-pay text-white"></i>
+            <i class="fa-brands fa-cc-visa text-white"></i>
+            <i class="fa-brands fa-cc-mastercard text-white"></i>
+            <i class="fa-solid fa-money-bill-wave text-emerald-400"></i>
+          </div>
+          <div class="bg-gray-900 p-2.5 rounded-lg border border-gray-800 text-[10px] text-gray-400">
+            🛡️ 100% Genuine Battery with GST Invoice &amp; Doorstep Replacement Guarantee.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <div>
+          &copy; 2026 Inva Power Batteries Pvt. Ltd. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-300">Terms of Sale</a>
+          <a href="#" class="hover:text-gray-300">Warranty Card T&amp;C</a>
+          <a href="#" class="hover:text-gray-300">Battery Recycling Norms</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Helper Nav script -->
+  <script>
+    function filterCategoryFromNav(cat) {
+      if (window.resetFilters) window.resetFilters();
+      const tab = document.querySelector(`[data-category-filter="${cat}"]`);
+      if (tab) tab.click();
+      const el = document.getElementById('collection-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+  <!-- ================= FLOATING PERSISTENT QUICK ACCESS CART BUTTON ================= -->
+  <aside aria-label="Quick Cart" id="floating-cart-bar" class="fixed bottom-20 sm:bottom-6 right-3 sm:right-6 z-40 transition-all duration-300">
+    <button 
+      onclick="window.toggleCartDrawer && window.toggleCartDrawer(true)"
+      class="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-500 hover:to-amber-500 text-white px-3.5 py-2.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl shadow-black/80 border-2 border-red-400/50 font-black text-xs sm:text-sm group hover:scale-105 active:scale-95 transition cursor-pointer"
+      title="View Cart"
+    >
+      <div class="relative flex items-center justify-center">
+        <i class="fa-solid fa-cart-shopping text-sm sm:text-lg"></i>
+        <span id="floating-cart-badge" class="absolute -top-2.5 -right-2.5 bg-white text-red-700 w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[9px] sm:text-[10px] font-black flex items-center justify-center shadow-lg border border-red-500">
+          0
+        </span>
+      </div>
+      <span class="tracking-wider uppercase font-black text-[11px] sm:text-xs">CART</span>
+      <span id="floating-cart-total" class="bg-black/40 px-2 py-0.5 rounded-full font-mono text-[11px] sm:text-xs text-yellow-300 font-black">
+        ₹0
+      </span>
+    </button>
+  </aside>
+
+  <!-- ================= MOBILE SMARTPHONE BOTTOM APP BAR ================= -->
+  <nav aria-label="Mobile Navigation" class="fixed bottom-0 left-0 right-0 z-40 mobile-bottom-nav flex md:hidden items-center justify-around py-2 px-1 text-center shadow-2xl">
+    <a href="#" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition flex-1 py-1">
+      <i class="fa-solid fa-bolt text-base text-red-500"></i>
+      <span class="text-[10px] font-bold mt-0.5">Shop</span>
+    </a>
+    <a href="#inverter-showcase" class="flex flex-col items-center justify-center text-gray-400 hover:text-sky-400 transition flex-1 py-1">
+      <i class="fa-solid fa-plug-circle-bolt text-base text-sky-400"></i>
+      <span class="text-[10px] font-bold mt-0.5">Inverter</span>
+    </a>
+    <a href="#vehicle-finder-section" class="flex flex-col items-center justify-center text-gray-400 hover:text-white transition flex-1 py-1">
+      <i class="fa-solid fa-car-battery text-base text-amber-400"></i>
+      <span class="text-[10px] font-bold mt-0.5">Finder</span>
+    </a>
+    <a href="#scrap-calculator-section" class="flex flex-col items-center justify-center text-gray-400 hover:text-emerald-400 transition flex-1 py-1">
+      <i class="fa-solid fa-scale-balanced text-base text-emerald-400"></i>
+      <span class="text-[10px] font-bold mt-0.5">₹120/kg</span>
+    </a>
+    <button onclick="window.toggleCartDrawer && window.toggleCartDrawer(true)" class="flex flex-col items-center justify-center text-red-400 font-bold flex-1 py-1 relative">
+      <div class="relative">
+        <i class="fa-solid fa-cart-shopping text-base"></i>
+        <span id="mobile-bottom-cart-badge" class="absolute -top-1.5 -right-3 bg-red-600 text-white w-3.5 h-3.5 rounded-full text-[8px] font-black flex items-center justify-center shadow">0</span>
+      </div>
+      <span class="text-[10px] font-bold mt-0.5">Cart</span>
+    </button>
+  </nav>
+
+  <!-- Application JS -->
+  <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bodyBike" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="60%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="shadowBike" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="225" cy="370" rx="170" ry="14" fill="#000000" opacity="0.3"/>
+
+  <g filter="url(#shadowBike)">
+    <!-- Battery Casing -->
+    <rect x="75" y="100" width="300" height="250" rx="10" fill="url(#bodyBike)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="70" y="80" width="310" height="30" rx="5" fill="#0f172a" stroke="#1e293b"/>
+
+    <!-- Terminals -->
+    <rect x="95" y="55" width="26" height="30" rx="3" fill="#dc2626"/>
+    <text x="108" y="76" fill="#ffffff" font-weight="900" font-size="18" text-anchor="middle">+</text>
+
+    <rect x="329" y="55" width="26" height="30" rx="3" fill="#475569"/>
+    <text x="342" y="75" fill="#ffffff" font-weight="900" font-size="20" text-anchor="middle">−</text>
+
+    <!-- Front Label -->
+    <rect x="95" y="125" width="260" height="205" rx="6" fill="#090d16" stroke="#0284c7" stroke-width="1.5"/>
+    
+    <g transform="translate(115, 160)">
+      <text x="0" y="0" fill="#ffffff" font-family="Impact, Arial Black, sans-serif" font-weight="900" font-size="26" letter-spacing="1">INVA POWER</text>
+      <rect x="0" y="6" width="120" height="3" fill="#38bdf8"/>
+      <text x="0" y="22" fill="#38bdf8" font-family="Arial, sans-serif" font-weight="800" font-size="10" letter-spacing="2">VRLA / MF BIKE BATTERY</text>
+    </g>
+
+    <g transform="translate(115, 215)">
+      <rect x="0" y="0" width="105" height="40" rx="4" fill="#1e293b"/>
+      <text x="52" y="16" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">CAPACITY</text>
+      <text x="52" y="32" fill="#38bdf8" font-family="Arial, sans-serif" font-weight="800" font-size="13" text-anchor="middle">2.5Ah - 9Ah</text>
+
+      <rect x="115" y="0" width="105" height="40" rx="4" fill="#1e293b"/>
+      <text x="167" y="16" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">WARRANTY</text>
+      <text x="167" y="32" fill="#4ade80" font-family="Arial, sans-serif" font-weight="800" font-size="13" text-anchor="middle">48 MONTHS</text>
+    </g>
+
+    <g transform="translate(115, 275)">
+      <rect x="0" y="0" width="220" height="36" rx="4" fill="#0f172a" stroke="#1e293b"/>
+      <text x="110" y="15" fill="#f8fafc" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">🏍️ ZERO MAINTENANCE VRLA</text>
+      <text x="110" y="28" fill="#94a3b8" font-family="Arial, sans-serif" font-size="8.5" text-anchor="middle">Instant Self-Start • Spill-Proof AGM</text>
+    </g>
+  </g>
+</svg>

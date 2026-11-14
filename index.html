@@ -709,8 +709,10 @@
                   id="calc-weight" 
                   value="45" 
                   min="1" 
-                  max="150" 
+                  max="250" 
                   step="0.5" 
+                  oninput="window.calculateScrap && window.calculateScrap()"
+                  onchange="window.calculateScrap && window.calculateScrap()"
                   class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-lg font-bold font-mono text-white focus:outline-none focus:border-emerald-500 pr-14"
                 >
                 <span class="absolute right-4 top-3.5 text-xs font-extrabold text-gray-400 font-mono">KG</span>
@@ -721,16 +723,16 @@
             <div>
               <span class="text-[11px] text-gray-400 block mb-1.5">Quick Weight Presets:</span>
               <div class="grid grid-cols-4 gap-1.5 text-xs">
-                <button type="button" onclick="setScrapWeightPreset(4)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                <button type="button" onclick="window.setScrapWeightPreset && window.setScrapWeightPreset(4)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition cursor-pointer">
                   4 kg (Bike)
                 </button>
-                <button type="button" onclick="setScrapWeightPreset(24)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                <button type="button" onclick="window.setScrapWeightPreset && window.setScrapWeightPreset(24)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition cursor-pointer">
                   24 kg (Tractor)
                 </button>
-                <button type="button" onclick="setScrapWeightPreset(45)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                <button type="button" onclick="window.setScrapWeightPreset && window.setScrapWeightPreset(45)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition cursor-pointer">
                   45 kg (Truck)
                 </button>
-                <button type="button" onclick="setScrapWeightPreset(55)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition">
+                <button type="button" onclick="window.setScrapWeightPreset && window.setScrapWeightPreset(55)" class="py-1.5 px-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-gray-300 text-[11px] font-semibold border border-gray-700 transition cursor-pointer">
                   55 kg (Inverter)
                 </button>
               </div>
@@ -811,8 +813,8 @@
   </div>
 
   <!-- ================= CHECKOUT MODAL (ONLINE & COD) ================= -->
-  <div id="checkout-modal" class="fixed inset-0 z-50 modal-backdrop-blur hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden my-8">
+  <div id="checkout-modal" class="fixed inset-0 modal-backdrop-blur hidden items-center justify-center p-3 sm:p-4 overflow-y-auto" style="display: none; z-index: 99999;">
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden my-auto relative">
       
       <!-- Checkout Modal Header -->
       <div class="p-4 border-b border-gray-800 bg-gray-950 flex items-center justify-between">
@@ -825,13 +827,13 @@
             <p class="text-[10px] text-gray-400">Secure 256-Bit Encrypted Doorstep Order</p>
           </div>
         </div>
-        <button onclick="closeCheckoutModal()" class="w-7 h-7 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
+        <button type="button" onclick="closeCheckoutModal()" class="w-7 h-7 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition cursor-pointer">
           <i class="fa-solid fa-xmark text-xs"></i>
         </button>
       </div>
 
       <!-- Checkout Step Content (Injected by app.js) -->
-      <div id="checkout-step-content" class="p-6">
+      <div id="checkout-step-content" class="p-4 sm:p-6">
         <!-- Rendered dynamically -->
       </div>
 
@@ -839,8 +841,8 @@
   </div>
 
   <!-- ================= QUICK VIEW MODAL ================= -->
-  <div id="quickview-modal" class="fixed inset-0 z-50 modal-backdrop-blur hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden my-8 relative">
+  <div id="quickview-modal" class="fixed inset-0 modal-backdrop-blur hidden items-center justify-center p-3 sm:p-4 overflow-y-auto" style="display: none; z-index: 99999;">
+    <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden my-auto relative">
       
       <button onclick="closeQuickView()" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
         <i class="fa-solid fa-xmark text-sm"></i>

@@ -98,8 +98,28 @@ body {
 
 /* Modal and Drawer backdrop animations */
 .modal-backdrop-blur {
-  background: rgba(4, 7, 13, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(4, 7, 13, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Ensure modals always appear on top of all headers and elements */
+#checkout-modal,
+#quickview-modal,
+#cart-backdrop {
+  z-index: 99999 !important;
+}
+
+#checkout-modal:not(.hidden) {
+  display: flex !important;
+}
+
+#quickview-modal:not(.hidden) {
+  display: flex !important;
+}
+
+#cart-backdrop:not(.hidden) {
+  display: block !important;
 }
 
 /* Animated Cart Badge */
